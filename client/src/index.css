@@ -5,8 +5,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(120deg, #41cbcf, #c6f583);
+  height: 100vh;
+  overflow: hidden;
+  color: #a73162;
 }
 
 .App {
   padding-inline: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  height: 170px;
+  overflow: auto;
+  padding: 10px 50px;
+  margin-bottom: 2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+li {
+  list-style-type: none;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+input,
+select {
+  border: none;
+  padding: 8px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+input[type='submit'],
+option {
+  cursor: pointer;
 }
