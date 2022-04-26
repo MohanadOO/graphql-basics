@@ -5,18 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(120deg, #41cbcf, #c6f583);
-  height: 100vh;
-  overflow: hidden;
+  background-color: #f7f7f7;
   color: #a73162;
 }
 
 .App {
+  max-width: 700px;
+  margin-inline: auto;
   padding-inline: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.title {
+  text-align: center;
 }
 
 .plus-icon {
@@ -25,22 +25,26 @@ body {
   cursor: pointer;
 }
 
-.book-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+ul {
   margin: 0;
-  height: 170px;
-  overflow: auto;
-  padding: 10px 50px;
-  margin-bottom: 2em;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0;
   border-radius: 8px;
 }
 
 li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+  padding: 0.7em 1em;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 5px;
   list-style-type: none;
+  border-radius: 7px;
+}
+
+li:hover {
   color: white;
+  background-color: #a73162;
 }
 
 form {
@@ -50,8 +54,10 @@ form {
   max-width: 300px;
   gap: 20px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
+  margin-inline: auto;
+  margin-bottom: 50px;
 }
 
 input,
@@ -65,4 +71,20 @@ select {
 input[type='submit'],
 option {
   cursor: pointer;
+}
+
+.book-details {
+  margin-block: 30px;
+  padding: 1em 3em;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-sizing: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.book-name {
+  text-align: center;
+}
+
+.book-list-container {
+  display: flex;
 }
