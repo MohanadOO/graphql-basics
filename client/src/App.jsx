@@ -14,15 +14,16 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className='App'>
-        <h1>Reading List</h1>
+        <h1 className='title'>Reading List</h1>
         <BookList />
         {!addBook ? (
           <PlusCircleIcon
             className='plus-icon'
             onClick={() => setAddBook(true)}
           />
-        ) : null}
-        {addBook ? <AddBook /> : null}
+        ) : (
+          <AddBook />
+        )}
       </div>
     </ApolloProvider>
   )
