@@ -34,6 +34,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
-app.listen(process.env.port || 5500, () => {
+app.listen(process.env.PORT || 5500, () => {
   console.log('now listening for requests on port 5500')
 })
