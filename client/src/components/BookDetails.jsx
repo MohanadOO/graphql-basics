@@ -13,9 +13,15 @@ function BookDetails(props) {
         return (
           <div className='book-details'>
             <h2 className='book-name'>{data.book.name} 📕</h2>
-            <h3 className='book-genre'>{data.book.genre}</h3>
-            <h3 className='book-author-name'>{data.book.author.name}</h3>
-            <h3 className='book-author-age'>{data.book.author.age}</h3>
+            <h3 className='book-genre'>
+              <span>Genre:</span> {data.book.genre}
+            </h3>
+            <h3 className='book-author-name'>
+              <span>Author:</span> {data.book.author.name}
+            </h3>
+            <h3 className='book-author-age'>
+              <span>Author Age:</span> {data.book.author.age}
+            </h3>
             <ul className='author-books'>
               {data.book.author.books.map(({ name, id }) => {
                 return <li key={id}>{name}</li>
