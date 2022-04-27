@@ -26,6 +26,9 @@ app.use(
   })
 )
 
+const root = require('path').join(__dirname, '../client/dist')
+app.use(express.static(root))
+
 app.listen(process.env.port || 5500, () => {
   console.log('now listening for requests on port 5500')
 })
