@@ -40,6 +40,7 @@ li {
   box-shadow: rgba(0, 0, 0, 0.6) 0 0 5px;
   list-style-type: none;
   border-radius: 7px;
+  transition: all 0.2s;
 }
 
 li:hover {
@@ -78,7 +79,22 @@ option {
   padding: 1em 3em;
   border-radius: 7px;
   background-color: rgba(0, 0, 0, 0.2);
-  box-sizing: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.book-details h3 {
+  display: inline-block;
+  margin-inline: 10px;
+  margin-block: 30px;
+  background-color: white;
+  max-width: fit-content;
+  padding: 0.4em;
+  border: 1px dashed coral;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.book-details {
 }
 
 .book-name {
@@ -87,4 +103,9 @@ option {
 
 .book-list-container {
   display: flex;
+}
+
+span {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
 }
