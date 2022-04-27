@@ -4,6 +4,7 @@ const schema = require('../schema/schema')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require('dotenv')
+const path = require('path')
 
 const app = express()
 dotenv.config()
@@ -26,8 +27,12 @@ app.use(
   })
 )
 
-const root = require('path').join(__dirname, '../client/dist')
+const root = path.join(__dirname, 'dist')
 app.use(express.static(root))
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+})
 
 app.listen(process.env.port || 5500, () => {
   console.log('now listening for requests on port 5500')
