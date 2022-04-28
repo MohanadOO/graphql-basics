@@ -7,7 +7,19 @@
   - [Why GraphQL ❓](#why-graphql)
   - [GraphQl 🆚 REST ](#graphql-vs-rest)
 - [Project 📦](#project-📦)
+  - [Server Side 👨‍💻](#server-side-👨‍💻)
+    - [Schema 📄](#schema)
+    - [Data types 📝](#data-types-📝)
+    - [Root Query 📚](#root-query-📚)
+    - [Mutation 🧬](#mutation-🧬)
+  - [Client Side 👨‍💻](#client-side-👨‍💻)
+    - [Apollo client](#apollo-client)
+    - [Queries 📚](#queries-📚)
+    - [useQuery ⚓](#usequery-⚓)
+    - [useMutation ⚓️](#usemutation-⚓)
 - [Resources 🔗](#resources-🔗)
+  - [Tools ⚙️](#tools-⚙)
+  - [Other Resources 🔗](#other-resources-🔗)
 
 ## About GraphQL 📚
 
