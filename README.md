@@ -2,26 +2,26 @@
 
 ## Table of contents 📂
 
-- [About GraphQL 💭](#about-graphql-📚)
+- [About GraphQL 💭](#about-graphql)
   - [What is GraphQL ❓](#what-is-graphql)
   - [Why GraphQL ❓](#why-graphql)
   - [GraphQl 🆚 REST ](#graphql-vs-rest)
-- [Project 📦](#project-📦)
-  - [Server Side 👨‍💻](#server-side-👨‍💻)
+- [Project 📦](#project)
+  - [Server Side 👨‍💻](#server-side)
     - [Schema 📄](#schema)
-    - [Data types 📝](#data-types-📝)
-    - [Root Query 📚](#root-query-📚)
-    - [Mutation 🧬](#mutation-🧬)
-  - [Client Side 👨‍💻](#client-side-👨‍💻)
+    - [Data types 📝](#data-types)
+    - [Root Query 📚](#root-query)
+    - [Mutation 🧬](#mutation)
+  - [Client Side 👨‍💻](#client-side)
     - [Apollo client](#apollo-client)
-    - [Queries 📚](#queries-📚)
-    - [useQuery ⚓](#usequery-⚓)
-    - [useMutation ⚓️](#usemutation-⚓)
-- [Resources 🔗](#resources-🔗)
-  - [Tools ⚙️](#tools-⚙)
-  - [Other Resources 🔗](#other-resources-🔗)
+    - [Queries 📚](#queries)
+    - [useQuery ⚓](#usequery)
+    - [useMutation ⚓️](#usemutation)
+- [Resources 🔗](#resources)
+  - [Tools ⚙️](#tools)
+  - [Other Resources 🔗](#other-resources)
 
-## About GraphQL 📚
+## About GraphQL
 
 ### What is GraphQL
 
@@ -39,13 +39,13 @@ In GraphQL you can have exactly what type of data you want (No _overfetching_ or
 
 ![](https://pbs.twimg.com/media/DgsXLk_X4AEKiJJ?format=jpg&name=4096x4096) _Photo from [@NikkitaFTW](https://twitter.com/NikkitaFTW)_
 
-## Project 📦
+## Project
 
 ![](./client/assets/images/screenshot.png) **App Screenshot**
 
 **I have created a Reading List App with _GraphQL_ for the server-side using _Express.js_ and _React_ for the client-side.**
 
-### Server Side 👨‍💻
+### Server Side
 
 On the server side, we will specify the GraphQL Schema. And we are going to connect the server to a database using **_MongoDB_** and **_Mongoose_**.
 
@@ -66,7 +66,7 @@ Here is the list of all the `graphql/type` modules I used in this project:
 
 -  -->
 
-#### **Data Types 📝**
+#### **Data Types**
 
 We have **books** and **authors** as the types of data and the code below shows how to create the type for the books and authors in the Schema file with GraphQL and set the fields we want for each type. 👇
 
@@ -106,7 +106,7 @@ const AuthorType = new GraphQLObjectType({
 })
 ```
 
-#### **Root Query 📚**
+#### **Root Query**
 
 The root query is the starting point of the graph. And in it, we will describe how to retrieve data from GraphQL. Let's say that we want to get all the book's names and genres of books. In the root query, we will describe that by giving it a name and what it will resolve.
 
@@ -138,7 +138,7 @@ const RootQuery = new GraphQLObjectType({
 })
 ```
 
-#### **Mutation 🧬**
+#### **Mutation**
 
 To add books or authors to our database we need to create a mutation. And in the mutation, we will describe how to add books and authors to the database.
 
@@ -178,7 +178,7 @@ mutation {
 }
 ```
 
-### Client-Side 👨‍💻
+### Client-Side
 
 #### **Apollo Client**
 
@@ -207,7 +207,7 @@ function App() {
 }
 ```
 
-#### **Queries 📚**
+#### **Queries**
 
 To create quires on the client-side we will use the `ApolloClient` library.
 
@@ -237,7 +237,7 @@ const addBookMutation = gql`
 
 **To add the books to the database we need to pass the name, genre, and authorid to the mutation that's why we need to pass the variables to the mutation.**
 
-#### **useQuery ⚓**
+#### **useQuery**
 
 To get the data from the server using a query we will use the `useQuery` hook.
 
@@ -266,7 +266,7 @@ function BookList() {
 }
 ```
 
-#### **useMutation ⚓**
+#### **useMutation**
 
 To add a book to our database we will use the `useMutation` hook.
 
@@ -315,9 +315,9 @@ function addBook() {
 }
 ```
 
-## Resources 🔗
+## Resources
 
-### Tools ⚙
+### Tools
 
 **For this project server I used these tools:**
 
@@ -336,7 +336,7 @@ function addBook() {
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/)
 
-### Other resources 🔗
+### Other resources
 
 - [GraphQL Tutorial by The Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f)
 - [GraphQL VS REST APIs](https://graphcms.com/blog/graphql-vs-rest-apis)
